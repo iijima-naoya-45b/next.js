@@ -14,12 +14,12 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password:
-  host: localhost
+  password: password  #passwordと設定
+  host: db #localhostからdbに設定
 
 development:
   <<: *default
-  database: sample
+  database: sample #app_developmentからsampleと設定
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
